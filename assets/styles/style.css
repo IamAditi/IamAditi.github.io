@@ -1,0 +1,338 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #070808;
+    color: white;
+    /* overflow-x: hidden; */
+}
+body, figure {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/* preloader css start */
+#loading {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: block;
+    z-index: 99;
+    background: black;
+}
+/* preloader css ends */
+#wrapper { 
+    position: relative;
+ }
+a{
+    text-decoration: none;
+    color: white;
+}
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 15px;
+}
+.highlight-text1 {
+    color: #ffd700;
+    font-weight: 300;
+}
+.active {
+    color: #ffd700;
+}
+nav {
+    background: #040a146e;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 999;
+}
+.nav-item i {
+    font-size: 24px;
+}
+nav a {
+    color: #fff;
+    margin: 0px 20px;
+    padding: 10px 0px;
+    position: relative;
+    text-transform: uppercase;
+}
+nav a:after,
+.contact a:after {
+    content: '';
+    position: absolute;
+    left:0;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background-color: #ffd700;
+    transition: width .2s ease-in-out;
+}
+nav a:hover:after,
+.contact a:hover:after {
+    width: 100%;
+}
+#main-banner {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+#main-banner h1 {
+    color: #fff;
+    font-size: 2.2em;
+    font-weight: 100;
+    margin: 0 auto;
+    margin-top: 59px;
+    position: relative;
+    top: 25%;
+    width: fit-content;
+}
+/* banner animated chevron start */
+@-moz-keyframes bounceup {
+    0%, 20%, 50%, 80%, 100% {
+      -moz-transform: translateY(0);
+      transform: translateY(0);
+    }
+    40% {
+      -moz-transform: translateY(-30px);
+      transform: translateY(-30px);
+    }
+    60% {
+      -moz-transform: translateY(-15px);
+      transform: translateY(-15px);
+    }
+}
+@-webkit-keyframes bounceup {
+    0%, 20%, 50%, 80%, 100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+    40% {
+      -webkit-transform: translateY(-30px);
+      transform: translateY(-30px);
+    }
+    60% {
+      -webkit-transform: translateY(-15px);
+      transform: translateY(-15px);
+    }
+}
+@keyframes bounceup {
+    0%, 20%, 50%, 80%, 100% {
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+    40% {
+      -moz-transform: translateY(-30px);
+      -ms-transform: translateY(-30px);
+      -webkit-transform: translateY(-30px);
+      transform: translateY(-30px);
+    }
+    60% {
+      -moz-transform: translateY(-15px);
+      -ms-transform: translateY(-15px);
+      -webkit-transform: translateY(-15px);
+      transform: translateY(-15px);
+    }
+}  
+#main-banner .fa-chevron-down {
+    color: #ffd700;
+    font-size: 24px;
+    position: absolute;
+    bottom: 40px;
+    left: 49%;
+    -moz-animation: bounceup 3s infinite;
+	-webkit-animation: bounceup 3s infinite;
+	animation: bounceup 3s infinite;
+}
+.heading1 {
+    color: white;
+    font-size: 2.1em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    position: relative;
+    text-align: center;
+    margin-bottom: 75px;
+}
+.heading1:after {
+    content: '';
+    position: absolute;
+    top: 45px;
+    left: 47%;
+    border: 1px solid #ffd700;
+    width: 70px;
+}
+.skill-list {
+    list-style-type: none;
+    position: relative;
+}
+.skill-item {
+    background: #eee;
+    margin-bottom: 5px;
+    width: 90%;
+}
+.skill-title {
+    background-color: #115173;
+    color: white;
+    display: inline-block;
+    padding: 5px;
+    width: 90px;
+}
+.skill-percent {
+    background-color: #eeeeee;
+    display: inline-block;
+}
+#section-about {
+    min-height: 100vh;
+}
+#section-about {
+    padding-top: 80px;
+}
+.about-text p {
+    position: relative;
+    color: white;
+    font-weight: 100;
+    font-size: 1.1em;
+    line-height: 25px;
+}
+.about-tab {
+    position: relative;
+    color:#fff;
+    max-width: 500px;
+}
+.about-tab a {
+    background: #068ef294;
+    text-align: center;
+    font-size: 1.6em;
+    display: table-cell;
+    vertical-align: middle;
+    transition: all 0.2s ease-in;
+    color: white;
+}
+.about-tab p,
+.about-tab i {
+    transition: all 0.2s ease-in-out;
+    transition-delay: 0.1s;
+}
+.about-tab a:hover {
+    background: #1694f0f0;
+    border: 2px solid #ffd700;
+}
+.about-tab a:hover p.heading2{
+    letter-spacing: 1px;
+}
+.about-tab a:hover i {
+    color: ffd700;
+    font-size: 30px;
+}
+.about-tab,
+.about-row {
+    width: 100%;
+}
+.about-row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.about-col {
+    height: 250px;
+    width: 50%;
+    padding: 1px;
+    float: left;
+    display: table;
+}
+#section-projects {
+    min-width: 100vh;
+    padding-top: 100px;
+}
+.project-list {
+    padding-top: 30px;
+}
+.project-list .project-item {
+    padding: 5px;
+}
+.project-item img {
+    width: 100%;
+    height: auto;
+}
+.project-list figure {
+    position: relative;
+    overflow: hidden;
+}
+.project-list .fa-globe {
+    margin-right: 10px;
+    font-size: 20px;
+}
+.project-list .project-overlay {
+    transition: .5s ease;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    background: rgba(17, 81, 115, 0.23921568627450981);
+}
+.project-list figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0px;
+    width: 100%;
+    text-align: center;
+    background: #0b7acb;
+    transition: height 0.3s ease;
+}
+.project-list a {
+    position: relative;
+    top: 30px;
+    color: white;
+    border: 1px solid #fff;
+    padding: 9px 20px;
+    background: #0b7acb;
+    font-size: 1em;
+    transition: all 0.2s linear;
+}
+.project-list a:hover {
+    color: #0b7acb;
+    background: white;
+}
+.project-list figure:hover .project-overlay {
+    background: transparent;
+}
+.project-list figure:hover figcaption {
+    height: 40%;
+}
+.credit-text {
+    font-weight: 100;
+    font-size: 1em;
+}
+.credit-text a {
+    color: #ffd700;
+}
+/* .more-to-come {
+    color: white;
+} */
+footer {
+    padding: 50px 0px;
+    text-align: center;
+}
+.contact a {
+    color: #ffd700;
+    cursor: pointer;
+    position: relative;
+    padding: 10px 0px;
+}
+.contact .fa-external-link-alt {
+    margin-left: 7px;
+}
+#canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute; 
+  }
