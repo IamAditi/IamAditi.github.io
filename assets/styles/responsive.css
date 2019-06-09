@@ -11,6 +11,15 @@
     padding: 15px;
     width: 100%;
 }
+@media only screen and (min-width: 425px) {
+    .heading1:after {
+        left: 45%;
+    }
+    .about-col {
+        height: 250px;
+    }
+    .col-custom {width: 50%;}
+}
 @media only screen and (min-width: 768px) {
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
@@ -25,4 +34,26 @@
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
     .col-custom {width: 20%;}
+
+    #main-banner h1 {
+        font-size: 2.2em;
+    }
+    .heading1 {
+        font-size: 2.1em;
+    }
+    .heading1:after {
+        left: 47%;
+    }
+    .about-text p {
+        font-size: 1.1em;
+    }
+    .nav-item i {
+        font-size: 24px;
+    }
+    .about-tab a {
+        font-size: 1.6em;
+    }
+    .about-tab {
+        max-width: 500px;
+    }
 }

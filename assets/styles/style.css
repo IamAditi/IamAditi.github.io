@@ -11,6 +11,9 @@ body, figure {
     margin: 0;
     padding: 0;
 }
+img {
+    width: 100%;
+}
 /* preloader css start */
 #loading {
     width: 100%;
@@ -53,7 +56,7 @@ nav {
     z-index: 999;
 }
 .nav-item i {
-    font-size: 24px;
+    font-size: 20px;
 }
 nav a {
     color: #fff;
@@ -84,13 +87,14 @@ nav a:hover:after,
 }
 #main-banner h1 {
     color: #fff;
-    font-size: 2.2em;
+    font-size: 1.8em;
     font-weight: 100;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    text-align: center;
     margin-top: 59px;
     position: relative;
     top: 25%;
-    width: fit-content;
+    /* width: fit-content; */
 }
 /* banner animated chevron start */
 @-moz-keyframes bounceup {
@@ -153,7 +157,7 @@ nav a:hover:after,
 }
 .heading1 {
     color: white;
-    font-size: 2.1em;
+    font-size: 1.7em;
     font-weight: 500;
     letter-spacing: 1px;
     position: relative;
@@ -164,29 +168,32 @@ nav a:hover:after,
     content: '';
     position: absolute;
     top: 45px;
-    left: 47%;
+    left: 40%;
     border: 1px solid #ffd700;
     width: 70px;
 }
+.skill-heading {
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 500;
+}
 .skill-list {
-    list-style-type: none;
-    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 10px;
+    /* border: 2px solid #03daff4d; */
+    background: #068ef294;
 }
-.skill-item {
-    background: #eee;
-    margin-bottom: 5px;
-    width: 90%;
-}
-.skill-title {
-    background-color: #115173;
-    color: white;
-    display: inline-block;
+.my-skill {
+    width: 95px;
+    height: 95px;
+    float: left;
     padding: 5px;
-    width: 90px;
+    /* background: #03daff4d; */
 }
-.skill-percent {
-    background-color: #eeeeee;
-    display: inline-block;
+.my-skill img {
+    height: 100%;
+    object-fit: contain;
 }
 #section-about {
     min-height: 100vh;
@@ -198,18 +205,18 @@ nav a:hover:after,
     position: relative;
     color: white;
     font-weight: 100;
-    font-size: 1.1em;
+    font-size: 1.0em;
     line-height: 25px;
 }
 .about-tab {
     position: relative;
     color:#fff;
-    max-width: 500px;
+    /* max-width: 500px; */
 }
 .about-tab a {
     background: #068ef294;
     text-align: center;
-    font-size: 1.6em;
+    font-size: 1.3em;
     display: table-cell;
     vertical-align: middle;
     transition: all 0.2s ease-in;
@@ -241,14 +248,15 @@ nav a:hover:after,
     display: table;
 }
 .about-col {
-    height: 250px;
+    height: 180px;
     width: 50%;
     padding: 1px;
     float: left;
     display: table;
 }
-#section-projects {
-    min-width: 100vh;
+#section-projects,
+#section-skills {
+    min-height: 100vh;
     padding-top: 100px;
 }
 .project-list {
@@ -257,10 +265,10 @@ nav a:hover:after,
 .project-list .project-item {
     padding: 5px;
 }
-.project-item img {
+/* .project-item img {
     width: 100%;
     height: auto;
-}
+} */
 .project-list figure {
     position: relative;
     overflow: hidden;
