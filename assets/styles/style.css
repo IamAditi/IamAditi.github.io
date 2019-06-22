@@ -14,6 +14,12 @@ body, figure {
 img {
     width: 100%;
 }
+.disp-lg {
+    display: none;
+}
+.disp-sm {
+    display: block;
+}
 /* preloader css start */
 #loading {
     width: 100%;
@@ -24,6 +30,13 @@ img {
     display: block;
     z-index: 99;
     background: black;
+}
+#loading img {
+    width: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 /* preloader css ends */
 #wrapper { 
@@ -66,7 +79,8 @@ nav a {
     text-transform: uppercase;
 }
 nav a:after,
-.contact a:after {
+.contact a:after,
+.skill-heading:after {
     content: '';
     position: absolute;
     left:0;
@@ -77,7 +91,8 @@ nav a:after,
     transition: width .2s ease-in-out;
 }
 nav a:hover:after,
-.contact a:hover:after {
+.contact a:hover:after,
+.skill-tab:hover .skill-heading:after  {
     width: 100%;
 }
 #main-banner {
@@ -173,28 +188,45 @@ nav a:hover:after,
     width: 70px;
 }
 .skill-heading {
-    text-align: center;
+    /* text-align: center; */
     font-size: 1.3em;
     font-weight: 500;
+    color: #ffd700;
+    position: relative;
+    width: fit-content;
+    margin: 0;
+    padding: 10px 0;
 }
 .skill-list {
     width: 100%;
     overflow: hidden;
     padding: 10px;
     /* border: 2px solid #03daff4d; */
-    background: #068ef294;
+    /* background: #068ef294; */
 }
 .my-skill {
-    width: 95px;
+    /* width: 95px;
     height: 95px;
-    float: left;
+    float: left; */
     padding: 5px;
+    margin: 0;
+    list-style-type: none;
     /* background: #03daff4d; */
 }
-.my-skill img {
+.my-skill li {
+    padding: 2px;
+}
+.my-skill li:before {
+    content: '\f0c8';
+  font-family: 'Font Awesome\ 5 Free';
+  font-size: 5px;
+  margin-right: 15px;
+  color: #ffd700;
+}
+/* .my-skill img {
     height: 100%;
     object-fit: contain;
-}
+} */
 #section-about {
     min-height: 100vh;
 }
@@ -284,7 +316,7 @@ nav a:hover:after,
     left: 0%;
     height: 100%;
     width: 100%;
-    background: rgba(17, 81, 115, 0.23921568627450981);
+    background: #0662a694;
 }
 .project-list figcaption {
     position: absolute;

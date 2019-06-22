@@ -56,4 +56,10 @@
     .about-tab {
         max-width: 500px;
     }
+    .disp-lg {
+        display: block;
+    }
+    .disp-sm {
+        display: none;
+    }
 }
