@@ -4,7 +4,6 @@ html {
 body {
     background-color: #070808;
     color: white;
-    /* overflow-x: hidden; */
 }
 body, figure {
     font-family: 'Montserrat', sans-serif;
@@ -50,6 +49,9 @@ a{
     max-width: 1300px;
     margin: 0 auto;
     padding: 15px;
+}
+.moz-block { 
+    display: block !important; 
 }
 .highlight-text1 {
     color: #ffd700;
@@ -104,12 +106,10 @@ nav a:hover:after,
     color: #fff;
     font-size: 1.8em;
     font-weight: 100;
-    /* margin: 0 auto; */
     text-align: center;
     margin-top: 59px;
     position: relative;
     top: 25%;
-    /* width: fit-content; */
 }
 /* banner animated chevron start */
 @-moz-keyframes bounceup {
@@ -188,12 +188,13 @@ nav a:hover:after,
     width: 70px;
 }
 .skill-heading {
-    /* text-align: center; */
     font-size: 1.3em;
     font-weight: 500;
     color: #ffd700;
     position: relative;
     width: fit-content;
+    width: -moz-max-content;    
+    width: -webkit-max-content; 
     margin: 0;
     padding: 10px 0;
 }
@@ -201,17 +202,11 @@ nav a:hover:after,
     width: 100%;
     overflow: hidden;
     padding: 10px;
-    /* border: 2px solid #03daff4d; */
-    /* background: #068ef294; */
 }
 .my-skill {
-    /* width: 95px;
-    height: 95px;
-    float: left; */
     padding: 5px;
     margin: 0;
     list-style-type: none;
-    /* background: #03daff4d; */
 }
 .my-skill li {
     padding: 2px;
@@ -223,10 +218,6 @@ nav a:hover:after,
   margin-right: 15px;
   color: #ffd700;
 }
-/* .my-skill img {
-    height: 100%;
-    object-fit: contain;
-} */
 #section-about {
     min-height: 100vh;
 }
@@ -243,7 +234,6 @@ nav a:hover:after,
 .about-tab {
     position: relative;
     color:#fff;
-    /* max-width: 500px; */
 }
 .about-tab a {
     background: #068ef294;
@@ -297,10 +287,6 @@ nav a:hover:after,
 .project-list .project-item {
     padding: 5px;
 }
-/* .project-item img {
-    width: 100%;
-    height: auto;
-} */
 .project-list figure {
     position: relative;
     overflow: hidden;
@@ -355,9 +341,6 @@ nav a:hover:after,
 .credit-text a {
     color: #ffd700;
 }
-/* .more-to-come {
-    color: white;
-} */
 footer {
     padding: 50px 0px;
     text-align: center;

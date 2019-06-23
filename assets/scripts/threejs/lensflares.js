@@ -6,20 +6,18 @@ init();
 animate();
 function init() {
     container = document.getElementById( 'canvas' );
-    // document.body.appendChild( container );
     // camera
     camera = new THREE.PerspectiveCamera( 40, window.innerWidth / document.body.scrollHeight, 1, 15000 );
     camera.position.z = 2000;
     controls = new THREE.FlyControls( camera );
     controls.movementSpeed = 100;
     controls.domElement = container;
-    controls.rollSpeed = Math.PI / 500;
+    controls.rollSpeed = Math.PI / 400;
     controls.autoForward = false;
     controls.dragToLook = false;
     // scene
     scene = new THREE.Scene();
     scene.background = new THREE.Color().setHSL( 0.51, 0.4, 0.01 );
-    // scene.fog = new THREE.Fog( scene.background, 3500, 15000 );
     // world
     var s = 250;
     var geometry = new THREE.BoxBufferGeometry( s, s, s );
@@ -48,10 +46,6 @@ function init() {
     addLight( 0.55, 0.9, 0.5, 10000, 10000, - 1000 );
     addLight( 0.55, 0.9, 0.5, 400, 600, - 1000 );
     addLight( 0.55, 0.9, 0.5, -10000, -10000, - 1000 );
-    // addLight( 0.08, 0.8, 0.5, 100, 300, - 1000 );
-    // addLight( 0.995, 0.5, 0.9, 5000, 5000, - 1000 );
-
-    // addLight( 0.08, 0.8, 0.5, 200, 300, - 1000 );
 
     function addLight( h, s, l, x, y, z ) {
         var light = new THREE.PointLight( 0xffffff, 1.5, 2000 );
@@ -74,9 +68,6 @@ function init() {
     //
     renderer.gammaInput = true;
     renderer.gammaOutput = true;
-    // stats
-    // stats = new Stats();
-    // container.appendChild( stats.dom );
     // events
     window.addEventListener( 'resize', onWindowResize, false );
 }
@@ -90,7 +81,6 @@ function onWindowResize() {
 function animate() {
     requestAnimationFrame( animate );
     render();
-    // stats.update();
 }
 function render() {
     var delta = clock.getDelta();
